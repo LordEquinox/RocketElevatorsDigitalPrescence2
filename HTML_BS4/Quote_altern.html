@@ -265,94 +265,29 @@
 	NOTE: Add .required class for required fields.
 	This form example already used on Careers page: page-careers.html
  -->
- <div class="col-lg-8 col-md-4 col-sm-10 mx-auto text-center form p-4">
-            <form class="validate" action="php/contact.php" method="post" enctype="multipart/form-data"
-                data-success="Sent! Thank you!" data-toastr-position="top-right" >
-                <fieldset>
-                    <!-- required [php action request] -->
-                    <input type="hidden" name="action" value="contact_send" />
+ <div id="wrapper">
+    <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form p-4">
+    <!-- BILLING -->
+    <fieldset class="mb-0 box-border-shadow p-20">
 
-                    <div class="row">
-                        <div class="col-md-4 col-sm-4">
-                            <label>First Name *</label>
-                            <input type="text" name="contact[first_name]" value="" class="form-control required">
-                        </div>
-                        <div class="col-md-4 col-sm-4">
-                            <label>Last Name *</label>
-                            <input type="text" name="contact[last_name]" value="" class="form-control required">
-                        </div>
-                        <div class="col-md-4 col-sm-4">
-                            <label>Business or Project Name *</label>
-                            <input type="text" name="contact[last_name]" value="" class="form-control required">
-                        </div>
-                    </div>
+        <h4>Building Information Required</h4>
 
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6">
-                            <label>Email *</label>
-                            <input type="email" name="contact[email]" value="" class="form-control required">
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <label>Phone *</label>
-                            <input required type="tel" value="" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required class="form-control" name="contact[phone]">
-                        </div>
-                    </div>
-                    
+        <hr />
 
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6">
-                            <label>Project Name *</label>
-                            <input type="text" name="contact[first_name]" value="" class="form-control required">
-                        </div>
-                        <div class="col-md-6">
-                            <label for="contact_department">Department</label>
-                            <select class="form-control pointer" name="contact[department]">
-                                <option value="">--- Select ---</option>
-                                <option value="Residential">Residential</option>
-                                <option value="Commercial">Commercial</option>
-                                <option value="Corporate">Corporate</option>
-                                <option value="Hybrid">Hybrid</option>
-                            </select>
-                        </div>
-                    </div>
-                    
-
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12">
-                                <label for="contact:message">Project Description *</label>
-                                <textarea required maxlength="10000" rows="8" class="form-control" name="contact[message]" id="contact:message"></textarea>
-                            
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <label>
-                                File Attachment
-                                <small class="text-muted"> (you may attach any pertinent document that we may need here) - optional</small>
-                            </label>
-
-                            <!-- custom file upload -->
-                            <input class="custom-file-upload" name="contact[attachment]" type="file" id="file"
-                                data-btn-text="Select a File" />
-                            <small class="text-muted block">Max file size capacity: 25Mb (zip/pdf/jpg/png)</small>
-
-                        </div>
-                    </div>
-
-                </fieldset>
-
-                <div class="row">
-                    <div class="col-md-12">
-                        <button type="submit" class="btn btn-3d btn-teal btn-xlg btn-block mt-30">
-                            SEND APPLICATION
-                            <span class="block font-lato">We'll get back to you within 24 hours</span>
-                        </button>
-                    </div>
-                </div>
-
-            </form>
+        <div class="col-md-6 col-sm-6">
+            <label class="mt-0 fs-14 fw-400" for="building_type">Building Type *</label>
+            <select id="building_type" name="building[type]" class="form-control pointer required">
+                <option value="0">Select...</option>
+                <option value="Residential">Residential</option>
+                <option value="Commercial">Commercial</option>
+                <option value="Corporate">Corporate</option>
+                <option value="Hybrid">Hybrid</option>
+            </select>
         </div>
-    </div>
+
+</div>
+
+</fieldset>
 
 
 
