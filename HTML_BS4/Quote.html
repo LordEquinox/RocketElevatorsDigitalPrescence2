@@ -132,7 +132,7 @@
 
 
     <!-- wrapper -->
-    <div id="wrapper">
+    
 
         <!-- 
 				AVAILABLE HEADER CLASSES
@@ -172,8 +172,8 @@
                     </button>
 
                     <!-- Logo -->
-                    <a class="logo float-left scrollTo" href="#top">
-                        <img src="demo_files/images/Rocket Elevator Assets/R2.png" alt="" />
+                    <a class="logo float-left" href="index.html">
+                        <img src="demo_files/images/Rocket Elevator Assets/R2.png" alt="rocketLogo" />
                     </a>
 
                     <!-- 
@@ -236,6 +236,7 @@
                 </div>
             </header>
             <!-- /Top Nav -->
+    <!-- /WRAPPER -->
 
         </div>
 
@@ -248,8 +249,6 @@
             </div>
 
         </section>
-
-    </div>
 
     <!-- 
 	.validate 				- very important, to activate validation plugin
@@ -264,57 +263,59 @@
 
 	NOTE: Add .required class for required fields.
 	This form example already used on Careers page: page-careers.html
- -->
+    -->
 
-    <div id="wrapper">
+    
         <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form p-4">
-                <h4>Building Information Required</h4>
+            <br>
+            <br>
+            <h2>Building Information Required</h2><br>
+            <hr /><br>
+            <br>
 
-                <hr />
-
-                <div class="col-md-12 col-sm-6 text-center">
-                    <label class="mt-0 fs-14 fw-400 text-center" for="buildingType">Building Type *</label>
-                    <select onchange="BuildingType()" id="building_type" name="building[type]" class="form-control pointer required">
-                        <option value="0">Select...</option>
-                        <option value="Residential">Residential</option>
-                        <option value="Commercial">Commercial</option>
-                        <option value="Corporate">Corporate</option>
-                        <option value="Hybrid">Hybrid</option>
-                    </select>
-                </div>
-            </fieldset>
+            <div class="col-md-12 col-sm-6 text-center">
+                <label class="mt-0 fs-25 fw-400 text-center" for="buildingType">Building Type *</label>
+                <select onchange="BuildingType()" id="building_type" name="building[type]"
+                    class="form-control pointer required">
+                    <option value="0">Select...</option>
+                    <option value="Residential">Residential</option>
+                    <option value="Commercial">Commercial</option>
+                    <option value="Corporate">Corporate</option>
+                    <option value="Hybrid">Hybrid</option>
+                </select>
+            </div>
         </div>
+    
 
-        <!-- RESIDENTIAL FILL UP-->
-        <div id="wrapper">
-            <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form p-4 text-center">
-
-                
-                    <div class="container">
-                        <div id="residentialBuildings" style="display: none">
-                            <!-- <div id="" style="display: none">  //CARL -->
-                            <div class="col-md-12 col-sm-2 text-center">
-                                <label for="units:quantity">HOW MANY UNITS (EXCLUDING UNDERGROUND LEVEL UNITS) ?</label>
-                                <input type="number" min="0" name="quantity" onkeyup="CalculateResidential()" id="units"
-                                    required /><br>
-                            </div><br>
-
-                            <div class="col-md-12 col-sm-2 text-center">
-                                <label for="floors:quantity">HOW MANY FLOOR LEVELS?</label>
-                                <input type="number" min="0" name="quantity" onkeyup="CalculateResidential()"
-                                    id="floor_resident" required /><br>
-                            </div><br>
-
-                            <div class="col-md-12 col-sm-2 text-center">
-                                <label for="floors:quantity">HOW MANY UNDERGROUND LEVELS? (CLICK IN THE BOX TO
-                                    CONFIRM)</label>
-                                <input type="number" min="0" name="quantity" id="underground_resident" required /><br>
-                            </div><br>
-
-                        </div>
+    <!-- RESIDENTIAL FILL UP-->
+    <div id="wrapper">
+        <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form p-4 text-center">
 
 
-                
+            <div class="container">
+                <div id="residentialBuildings" style="display: none">
+                    <!-- <div id="" style="display: none">  //CARL -->
+                    <div class="col-md-12 col-sm-2 text-center">
+                        <label for="units:quantity">HOW MANY UNITS (EXCLUDING UNDERGROUND LEVEL UNITS) ?</label>
+                        <input type="number" min="0" name="quantity" onkeyup="CalculateResidential()" id="units"
+                            required /><br>
+                    </div><br>
+
+                    <div class="col-md-12 col-sm-2 text-center">
+                        <label for="floors:quantity">HOW MANY FLOOR LEVELS?</label>
+                        <input type="number" min="0" name="quantity" onkeyup="CalculateResidential()" id="floor_resident" required /><br>
+                    </div><br>
+
+                    <div class="col-md-12 col-sm-2 text-center">
+                        <label for="floors:quantity">HOW MANY UNDERGROUND LEVELS? (CLICK IN THE BOX TO
+                            CONFIRM)</label>
+                        <input type="number" min="0" name="quantity" id="underground_resident" required /><br>
+                    </div><br>
+
+                </div>
+
+
+
             </div>
             <!-- /RESIDENTIAL FILL UP -->
 
@@ -324,55 +325,55 @@
         <div id="wrapper">
             <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form p-4 text-center">
 
-                
-                    <div class="container">
-                        <div id="commercialBuildings" style="display: none">
-                            <!-- <div id="" style="display: none">  //CARL -->
-                            <div class="col-md-12 col-sm-2 text-center">
-                                <label for="units:quantity">HOW MANY COMMERCIAL ENTITIES?</label>
-                                <input type="number" min="0" name="quantity" onkeyup="CalculateCommercial()"
-                                    id="entities_comm" required /><br>
-                            </div><br>
 
-                            <div class="col-md-12 col-sm-2 text-center">
-                                <label for="floors:quantity">HOW MANY FLOOR LEVELS?</label>
-                                <input type="number" min="0" name="quantity" onkeyup="CalculateCommercial()"
-                                    id="floor_comm" required /><br>
-                            </div><br>
+                <div class="container">
+                    <div id="commercialBuildings" style="display: none">
+                        <!-- <div id="" style="display: none">  //CARL -->
+                        <div class="col-md-12 col-sm-2 text-center">
+                            <label for="units:quantity">HOW MANY COMMERCIAL ENTITIES?</label>
+                            <input type="number" min="0" name="quantity" onkeyup="CalculateCommercial()"
+                                id="entities_comm" required /><br>
+                        </div><br>
 
-                            <div class="col-md-12 col-sm-2 text-center">
-                                <label for="floors:quantity">HOW MANY UNDERGROUND LEVELS?</label>
-                                <input type="number" min="0" name="quantity" onkeyup="CalculateCommercial()"
-                                    id="underground_comm" required /><br>
-                            </div><br>
+                        <div class="col-md-12 col-sm-2 text-center">
+                            <label for="floors:quantity">HOW MANY FLOOR LEVELS?</label>
+                            <input type="number" min="0" name="quantity" onkeyup="CalculateCommercial()" id="floor_comm"
+                                required /><br>
+                        </div><br>
 
-                            <div class="col-md-12 col-sm-2 text-center">
-                                <label for="parking:quantity">HOW MANY AVAILABLE PARKING SPACES?</label>
-                                <input type="number" min="0" name="quantity" onkeyup="CalculateCommercial()"
-                                    id="parking_comm" required /><br>
-                            </div><br>
-                            <div class="col-md-12 col-sm-2 text-center">
-                                <label for="occupants:quantity">MAXIMUM OF OCCUPANTS PER FLOOR LEVEL</label>
-                                <input type="number" min="0" name="quantity" onkeyup="CalculateCorporate()"
-                                    id="occupants_corp" required /><br>
-                            </div><br>
+                        <div class="col-md-12 col-sm-2 text-center">
+                            <label for="floors:quantity">HOW MANY UNDERGROUND LEVELS?</label>
+                            <input type="number" min="0" name="quantity" onkeyup="CalculateCommercial()"
+                                id="underground_comm" required /><br>
+                        </div><br>
 
-                        </div>
+                        <div class="col-md-12 col-sm-2 text-center">
+                            <label for="parking:quantity">HOW MANY AVAILABLE PARKING SPACES?</label>
+                            <input type="number" min="0" name="quantity" onkeyup="CalculateCommercial()"
+                                id="parking_comm" required /><br>
+                        </div><br>
+                        <div class="col-md-12 col-sm-2 text-center">
+                            <label for="occupants:quantity">MAXIMUM OF OCCUPANTS PER FLOOR LEVEL</label>
+                            <input type="number" min="0" name="quantity" onkeyup="CalculateCorporate()"
+                                id="occupants_corp" required /><br>
+                        </div><br>
+
+                    </div>
 
 
-                
+
+
+                </div>
 
             </div>
-
+            <!-- /COMMERCIAL FILL UP-->
         </div>
-        <!-- /COMMERCIAL FILL UP-->
-    </div>
 
-    <!-- CORPORATE FILL UP -->
-    <div id="wrapper">
-        <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form p-4 text-center">
+        <!-- CORPORATE FILL UP -->
+        <div id="wrapper">
+            <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form p-4 text-center">
 
-            
+
                 <div class="container">
                     <div id="corporateBuildings" style="display: none">
                         <!-- <div id="" style="display: none">  //CARL -->
@@ -407,17 +408,17 @@
 
                     </div>
                 </div>
-            
+
+            </div>
+
         </div>
+        <!-- /CORPORATE FILL UP-->
 
-    </div>
-    <!-- /CORPORATE FILL UP-->
+        <!-- HYBRID FILL UP -->
+        <div id="wrapper">
+            <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form p-4 text-center">
 
-    <!-- HYBRID FILL UP -->
-    <div id="wrapper">
-        <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form p-4 text-center">
 
-            
                 <div class="container">
                     <div id="hybridBuildings" style="display: none">
                         <!-- <div id="" style="display: none">  //CARL -->
@@ -455,11 +456,11 @@
                         </div><br>
 
                     </div>
-            
-        </div>
 
-    </div>
-    <!-- /HYBRID FILL UP-->
+                </div>
+
+            </div>
+            <!-- /HYBRID FILL UP-->
 
 
 
@@ -470,7 +471,7 @@
 
 <!-- /QUOTE -->
 
-<hr class="m-0" /><!-- 1px line separator -->
+<hr class="m-15" /><!-- 1px line separator -->
 
 <!-- SERVICE TYPE -->
 <div class="toggle-transparent toggle-bordered-full clearfix">
@@ -480,12 +481,12 @@
                 <div class="col-md-12 col-sm-2 text-center clearfix">
                     <form action="/action_page.php">
                         <p>Please select the type of Service Product that would best suit your needs:</p>
-                        <input id="service_type_standard" name="category" type="radio" value="7565"
-                        checked="checked" /> Standard<br>
-                        <input id="service_type_premium" name="category" type="radio" value="12345"
-                        checked="checked" /> Premium<br>
+                        <input id="service_type_standard" name="category" type="radio" value="7565" checked="checked" />
+                        Standard<br>
+                        <input id="service_type_premium" name="category" type="radio" value="12345" checked="checked" />
+                        Premium<br>
                         <input id="service_type_excelsium" name="category" type="radio" value="15400"
-                        checked="checked" /> Excelium<br>
+                            checked="checked" /> Excelium<br>
                         <br>
                         <input type="submit" value="Submit">
                     </form>
@@ -497,7 +498,7 @@
 
 <!-- /SERVICE TYPE -->
 
-<hr class="m-0" /><!-- 1px line separator -->
+<hr class="m-15" /><!-- 1px line separator -->
 
 <!-- CALCULATION -->
 
@@ -511,32 +512,35 @@
                         <element onkeyup="myScript"></element>
                     </span>
                     <strong class="float-left">Quantity Of Elevator Shafts:</strong>
-                    <strong class="float-right" id=""></strong>
+                    <strong class="float-right" id="average_elevators"></strong>
+                    <br>
                     <br>
                     <strong class="float-left">Quantity Of Column Lifts:</strong>
-                    <strong class="float-right" id=""></strong>
+                    <strong class="float-right" id="required_column_lifts"></strong><br>
                     <br>
                     <strong class="float-left">Quantity Of Required Elevator Shafts:</strong>
-                    <strong class="float-right" id=""></strong>
+                    <strong class="float-right" id="required_elevators"></strong>
                     </span>
                     <br>
+                    <br>
                     <span class="clearfix">
-                        <strong><span class="float-right" id=""></span></strong>
+                        <strong><span class="float-right fs-30" id="totalFees"></span></strong>
                         <strong class="float-left">Subtotal:</strong>
-                    </span>
+                    </span><br>
+                    <br>
                     <span class="clearfix">
                         <strong><span class="float-left">Installation Fees:</span></strong>
                         <strong class="float-right" id=""></strong>
                     </span>
 
-                    <hr />
+                    <hr class="m-15" />
 
                     <span class="clearfix">
-                        <strong><span class="float-right fs-20" id=""></span></strong>
+                        <strong><span class="float-right fs-30" id=""></span></strong>
                         <strong class="float-left">TOTAL:</strong>
                     </span>
 
-                    <hr />
+                    <hr class="m-15" />
 
                     <button class="btn btn-primary btn-lg btn-block fs-15"><i class="fa fa-mail-forward"></i>
                         Request A Quote Now</button>
@@ -627,6 +631,7 @@
 <!-- PAGELEVEL SCRIPTS -->
 <script src="assets/js/contact.js"></script>
 <script src="assets/js/Quote.js"></script>
+<script src="assets/js/calculs_residential.js"></script>
 
 
 </script>
