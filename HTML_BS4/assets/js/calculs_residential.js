@@ -21,23 +21,24 @@ function CalculateResidential() {
         console.log("nb_column_lifts", NbColumnLifts); 
         $('#required_column_lifts').html(NbColumnLifts);
         
-        // INSTALLATION FEES
-        InstallationFees = Math.ceil(Apartments * 7565) * 0.1;
-        console.log("InstallationFees", InstallationFees);
-        $('#units').html(InstallationFees);
+        // SERVICE FEES
+        ServiceFees = Math.ceil(nb_cage * category);
+        console.log("ServiceFees", ServiceFees);
 
 
-        // SUB-TOTAL PRICE RESIDENTIAL (prix sous-total residentiel)
-        PriceResident = (Math.ceil(NbColumnLifts * nb_cage * category) + InstallationFees); 
-        console.log("priceResident", PriceResident); 
-        $('#subtotal').html(PriceResident);
+        // // SUB-TOTAL PRICE RESIDENTIAL (prix sous-total residentiel)
+        // PriceResident = Math.ceil((nb_cage * category) + ServiceFees); 
+        // console.log("PriceResident", PriceResident); 
+        // $('#subTotal').html(PriceResident);
+
+        // INSTALLATION FEES (frais d'installation)
+        InstallFees = Math.ceil(ServiceFees * 0.1);
+        console.log("InstallFees", InstallFees);
      
-
+//PriceResident * 0.1 = x
+//PriceResident + x = Total
         // TOTAL PRICE RESIDENTIAL (prix sous-total residentiels)
-        PriceTotalResident = Math.ceil(PriceResident + category); 
-        console.log("PriceTotalResidentt", PriceTotalResident); 
+        PriceTotalResident = Math.ceil(ServiceFees + InstallFees); 
+        console.log("PriceTotalResident", PriceTotalResident); 
         $('#totalFees').html(PriceTotalResident);
-
-        return PriceResident;
-
     };
