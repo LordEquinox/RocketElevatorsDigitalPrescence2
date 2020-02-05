@@ -1,30 +1,4 @@
 // RESIDENTIAL CALCULATION
-
-
-var ServiceVariable;
-var RealFeez;
-
-
-
-
-function selector(){
-ServiceVariable = ($("input[class='radioService']:checked").value)
-if (ServiceVariable = 7565) {
-    Feez = 0.1
-}
-else if (ServiceVariable = 12345) {
-    Feez = 0.3
-}
-else {
-    Feez = 0.6
-}
-
-RealFeez = Feez
-};
-
-
-
-
 function CalculateResidential() {
     var Floors = document.getElementById("floor_resident").value;
     var Apartments = document.getElementById("units").value;
@@ -49,13 +23,13 @@ function CalculateResidential() {
         $('#required_column_lifts').html(NbColumnLifts);
         
         // SERVICE FEES = SUB-TOTAL (frais de service = sous-total)
-        ServiceFees = Math.ceil(nb_cage * ServiceVariable);
+        ServiceFees = Math.ceil(nb_cage * 7565);
         console.log("ServiceFees", ServiceFees);
         $('#subTotal').html(ServiceFees);
 
 
         // INSTALLATION FEES (frais d'installation)
-        InstallFees = Math.ceil(ServiceFees * RealFeez);
+        InstallFees = Math.ceil(ServiceFees * 0.1);
         console.log("InstallFees", InstallFees);
         $('#InstallFees').html(InstallFees);
 

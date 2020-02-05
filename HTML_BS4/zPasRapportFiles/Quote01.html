@@ -16,7 +16,8 @@
     <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
 
     <!-- WEB FONTS : use %7C instead of | (pipe) -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700"
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700"
         rel="stylesheet" type="text/css" />
 
     <!-- CORE CSS -->
@@ -479,17 +480,12 @@
             <div class="row m-0-bottom">
                 <div class="col-md-12 col-sm-2 text-center clearfix fs-25">
                     
-                    <form class="radioProd" action="/action_page.php">
-                        <p>Please select the type of Service Product that would best suit your needs:</p>
-                        <input id="service_type_standard" name="category" type="radio" value="7565" onchange='selector()' checked="checked"/>
+                    <form id="myForm">
+                        <input id="service_type_standard" type="radio" name="category1" value="7565" checked="checked"/>
                         Standard<br>
-                        <input id="service_type_premium" name="category" type="radio" value="12345" onchange='selector()' checked="checked" />
-                        Premium<br>
-                        <input id="service_type_excelsium" name="category" type="radio" value="15400" onchange='selector()' checked="checked" /> 
-                        Excelium<br>
-                        <br>
-                        <input type="submit" value="Submit">
-                    </form>
+                        <input id="service_type_premium" type="radio" name="category2" value="12345" checked="checked" /> Excelium<br>
+                        <input id="service_type_excelsium" type="radio" name="category3" value="15400" checked="checked" /> Excelium<br>
+                      </form>
                     
                 </div>
             </div>
@@ -513,7 +509,7 @@
                         <element onkeyup="myScript"></element>
                     </span>
                     <strong class="float-left">Quantity Of Elevator Shafts:</strong>
-                            <strong class="float-right" id="average_units"></strong>
+                            <strong class="float-right" id="average_elevators"></strong>
                             <br>
                     <strong class="float-left">Quantity Of Column Lifts:</strong>
                     <strong class="float-right" id="required_column_lifts"></strong><br>
