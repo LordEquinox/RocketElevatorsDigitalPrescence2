@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 /** ********************************************** **
 	@Author			Dorin Grigoras
 	@Website		www.stepofweb.com
@@ -60,7 +61,7 @@ html, body {
 body {
 	color:#666;
 	background-color:#fff;
-	font-family:'Open Sans',Arial,Helvetica,sans-serif;
+	font-family: 'Roboto', sans-serif;
 	-webkit-font-smoothing: antialiased;
 
 	font-size:16px; line-height:1.5;
@@ -457,14 +458,14 @@ section.dark h6.page-header {
 
 /* fonts */
 .font-open-sans {
-	font-family:'Open Sans',Arial,Helvetica,sans-serif !important;
+	font-family: 'Roboto', sans-serif; !important;
 }
 .font-lato {
 	font-weight:300;
-	font-family:'Lato',Arial,Helvetica,sans-serif !important;
+	font-family: 'Roboto', sans-serif; !important;
 }
 .font-raleway {
-	font-family:'Raleway',Arial,Helvetica,sans-serif !important;
+	font-family: 'Roboto', sans-serif; !important;
 }
 
 
