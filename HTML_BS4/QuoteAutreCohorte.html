@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Multipurpose + Admin</title>
+    <meta name="description" content="" />
+    <meta name="Author" content="Carl Eric Vasquez" />
+
+    <!-- mobile settings -->
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+    <!-- WEB FONTS : use %7C instead of | (pipe) -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700"
+        rel="stylesheet" type="text/css" />
+
+    <!-- CORE CSS -->
+    <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- REVOLUTION SLIDER -->
+    <link href="assets/plugins/slider.revolution/css/extralayers.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/slider.revolution/css/settings.css" rel="stylesheet" type="text/css" />
+
+    <!-- THEME CSS -->
+    <link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+
+    <!-- PAGE LEVEL SCRIPTS -->
+    <link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/color_scheme/darkblue.css" rel="stylesheet" type="text/css" id="color_scheme" />
+</head>
+
+<!--
+		AVAILABLE BODY CLASSES:
+		
+		smoothscroll 			= create a browser smooth scroll
+		enable-animation		= enable WOW animations
+
+		bg-grey					= grey background
+		grain-grey				= grey grain background
+		grain-blue				= blue grain background
+		grain-green				= green grain background
+		grain-blue				= blue grain background
+		grain-orange			= orange grain background
+		grain-yellow			= yellow grain background
+		
+		boxed 					= boxed layout
+		pattern1 ... patern11	= pattern background
+		menu-vertical-hide		= hidden, open on click
+		
+		BACKGROUND IMAGE [together with .boxed class]
+		data-background=""
+	-->
+
+<body class="smoothscroll enable-animation">
+
+    <!-- SLIDE TOP -->
+    <div id="slidetop">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-4">
+                    <h6><i class="icon-heart"></i> WHY ROCKET ELEVATORS?</h6>
+                    <p>
+                        Our approach is to combine our understanding of any proposed project with a commitment to
+                        meeting the business goals of our clients.<br>
+                        We are proactive in our engineering corporation and remain alert by ways of security systems
+                        that provides permanent lectures in the occurence of any anomaly that may appear on a
+                        structure.<br>
+                        Our staff is diverse and talented in all aspects of elevator technology. We love what we do and
+                        it shows in the solutions we produce.
+                    </p>
+                </div>
+
+                <div class="col-md-4">
+                    <h6><i class="fa-facheck"></i> RECENTLY VISITED</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="https://www.emerson-us.com/"><i class="fa fa-angle-right"></i> Emerson
+                                International</a></li>
+                        <li><a href="https://onemiamidowntown.com/"><i class="fa fa-angle-right"></i> One Miami Downtown
+                            </a></li>
+                        <li><a href="https://www.pocruises.com/"><i class="fa fa-angle-right"></i> P &amp O Cruises</a>
+                        </li>
+                        <li><a
+                                href="https://www.marriott.com/hotels/travel/bnago-gaylord-opryland-resort-and-convention-center/"><i
+                                    class="fa fa-angle-right"></i> Gaylord Opryland Resort & Convention Center</a></li>
+                        <li><a href="https://www.riotinto.com/canada/diavik-2232.aspx"><i class="fa fa-angle-right"></i>
+                                Diavik Diamond Mine</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <h6><i class="icon-envelope"></i> CONTACT INFO</h6>
+                    <ul class="list-unstyled">
+                        <li><b>Address:</b> 418-725 Boulevard Lebourgneuf, <br /> Québec, QC G2J 0C4, Canada</li>
+                        <li><b>Phone:</b> 1-800-555-5555</li>
+                        <li><b>Email:</b> <a href="mailto:support@carlericvasquez.com">support@carlericvasquez.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+        <a class="slidetop-toggle" href="#">
+            <!-- toggle button --></a>
+
+    </div>
+    <!-- /SLIDE TOP -->
+
+
+    <!-- wrapper -->
+    <div id="wrapper">
+
+        <!-- 
+				AVAILABLE HEADER CLASSES
+
+				Default nav height: 96px
+				.header-md 		= 70px nav height
+				.header-sm 		= 60px nav height
+
+				.b-0 		= remove bottom border (only with transparent use)
+				.transparent	= transparent header
+				.translucent	= translucent header
+				.sticky			= sticky header
+				.static			= static header
+				.dark			= dark header
+				.bottom			= header on bottom
+				
+				shadow-before-1 = shadow 1 header top
+				shadow-after-1 	= shadow 1 header bottom
+				shadow-before-2 = shadow 2 header top
+				shadow-after-2 	= shadow 2 header bottom
+				shadow-before-3 = shadow 3 header top
+				shadow-after-3 	= shadow 3 header bottom
+
+				.clearfix		= required for mobile menu, do not remove!
+
+				Example Usage:  class="clearfix sticky header-sm transparent b-0"
+			-->
+        <div id="header" class="navbar-toggleable-md sticky header-md clearfix">
+
+            <!-- TOP NAV -->
+            <header id="topNav">
+                <div class="container">
+
+                    <!-- Mobile Menu Button -->
+                    <button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Logo -->
+                    <a class="logo float-left scrollTo" href="#top">
+                        <img src="demo_files/images/rocket_elevator_assets/R2.png" alt="" />
+                    </a>
+
+                    <!-- 
+							Top Nav 
+							
+							AVAILABLE CLASSES:
+							submenu-dark = dark sub menu
+						-->
+                    <div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
+                        <nav class="nav-main">
+
+                            <!-- 
+									.nav-onepage
+									Required for onepage navigation links
+									
+									Add .external for an external link!
+								-->
+                            <ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+                                <li class="active">
+                                    <!-- HOME -->
+                                    <a href="#home">
+                                        HOME
+                                    </a>
+                                </li>
+                                <li>
+                                    <!-- SERVICES -->
+                                    <a href="#services">
+                                        SERVICES
+                                    </a>
+                                </li>
+                                <li>
+                                    <!-- PORTFOLIO -->
+                                    <a href="#portfolio">
+                                        PORTFOLIO
+                                    </a>
+                                </li>
+                                <li>
+                                    <!-- NEWS -->
+                                    <a href="#news">
+                                        NEWS
+                                    </a>
+                                </li>
+                                <li>
+                                    <!-- CLIENTS -->
+                                    <a href="#clients">
+                                        CLIENTS
+                                    </a>
+                                </li>
+                                <li>
+                                    <!-- CONTACT -->
+                                    <a href="#contact">
+                                        CONTACT
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </nav>
+                    </div>
+
+                </div>
+            </header>
+            <!-- /Top Nav -->
+
+        </div>
+
+        <section class="page-header">
+            <div class="container">
+
+                <h1><strong>QUOTE</strong></h1>
+
+        </section>
+
+        <!-- wrapper -->
+        <div id="wrapper">
+            <!-- BILLING -->
+            <fieldset class="mb-0 box-border-shadow p-20">
+
+                <h4>Building Information Required</h4>
+
+                <hr />
+
+                <div class="col-md-6 col-sm-6">
+                    <label class="mt-0 fs-14 fw-400" for="building_type">Building Type *</label>
+                    <select id="building_type" name="building[type]" class="form-control pointer required">
+                        <option value="0">Select...</option>
+                        <option value="Residential">Residential</option>
+                        <option value="Commercial">Commercial</option>
+                        <option value="Corporate">Corporate</option>
+                        <option value="Hybrid">Hybrid</option>
+                    </select>
+                </div>
+            </fieldset>
+
+        </div>
+
+       
+
+        <div class="container">
+
+            <div id="residential_field_zone" style="display: none">
+                <section>
+                    <div>
+                        <label for="units:quantity">HOW MANY UNITS (EXCLUDING UNDERGROUND LEVEL UNITS) ?</label>
+                        <input type="number" min="0" name="quantity" onkeyup="CalculateResidential()" id="units"
+                            required />
+                    </div>
+                    <div>
+                        <label for="floors:quantity">HOW MANY FLOOR LEVELS?</label>
+                        <input type="number" min="0" name="quantity" onkeyup="CalculateResidential()"
+                            id="floor_resident" required />
+                    </div>
+                    <div>
+                        <label for="floors:quantity">HOW MANY UNDERGROUND LEVELS? (CLICK IN THE BOX TO CONFIRM)</label>
+                        <input type="number" min="0" name="quantity" id="underground_resident" required />
+                    </div>
+                </section>
+
+            </div>
+            <div id="commercial_field_zone" style="display: none">
+                <section>
+                    <div>
+                        <label for="units:quantity">HOW MANY COMMERCIAL ENTITIES?</label>
+                        <input type="number" min="0" name="quantity" onkeyup="CalculateCommercial()" id="entities_comm"
+                            required />
+                    </div>
+                    <div>
+                        <label for="floors:quantity">HOW MANY FLOOR LEVELS?</label>
+                        <input type="number" min="0" name="quantity" onkeyup="CalculateCommercial()" id="floor_comm"
+                            required />
+                    </div>
+                    <div>
+                        <label for="floors:quantity">HOW MANY UNDERGROUND LEVELS?</label>
+                        <input type="number" min="0" name="quantity" onkeyup="CalculateCommercial()"
+                            id="underground_comm" required />
+                    </div>
+                    <div>
+                        <label for="parking:quantity">HOW MANY AVAILABLE PARKING SPACES?</label>
+                        <input type="number" min="0" name="quantity" onkeyup="CalculateCommercial()" id="parking_comm"
+                            required />
+                    </div>
+                    <div>
+                        <label for="columnLifts:quantity">CURRENT QUANTITY OF COLUMNS LIFTS</label>
+                        <input type="number" min="0" name="quantity" onkeyup="CalculateCommercial()"
+                            id="lift_commercial" required />
+                    </div>
+                    <div>
+                        <label for="elevators:quantity">CURRENT QUANTITY OF ELEVATOR SHAFTS</label>
+                        <input type="number" min="0" name="quantity" onkeyup="CalculateCommercial()" id="shaft"
+                            required />
+                    </div>
+                </section>
+            </div>
+            <div id="corporate_field_zone" style="display: none">
+                <section>
+                    <div>
+                        <label for="units:quantity">HOW MANY CORPORATE ENTITIES?</label>
+                    </div>
+                    <div>
+                        <input type="number" min="0" name="quantity" onkeyup="CalculateCorporate()" id="entities_corp"
+                            required />
+                    </div>
+                    <div>
+                        <label for="floors:quantity">HOW MANY FLOOR LEVELS?</label>
+                        <input type="number" min="0" name="quantity" onkeyup="CalculateCorporate()" id="floor_corp"
+                            required />
+                    </div>
+                    <div>
+                        <label for="floors:quantity">HOW MANY UNDERGROUND LEVELS?</label>
+                        <input type="number" min="0" name="quantity" onkeyup="CalculateCorporate()"
+                            id="underground_corp" required />
+                    </div>
+                    <div>
+                        <label for="floors:quantity">HOW MANY AVAILABLE PARKING SPACES?</label>
+                        <input type="number" min="0" name="quantity" onkeyup="CalculateCorporate()" id="parking_corp"
+                            required />
+                    </div>
+                    <div>
+                        <label for="occupants:quantity">MAXIMUM OF OCCUPANTS PER FLOOR LEVEL</label>
+                        <input type="number" min="0" name="quantity" onkeyup="CalculateCorporate()" id="occupants_corp"
+                            required />
+                    </div>
+                </section>
+            </div>
+            <div id="hybrid_field_zone" style="display: none">
+                <section>
+                    <div>
+                        <label for="units:quantity">HOW MANY COMMERCIAL ENTITIES?</label>
+                        <input type="number" min="0" name="quantity" onkeyup="CalculateHybrid()" id="entities_hybrid"
+                            required />
+                    </div>
+                    <div>
+                        <label for="floors:quantity">HOW MANY FLOOR LEVELS?</label>
+                        <input type="number" min="0" name="quantity" onkeyup="CalculateHybrid()" id="floor_hybrid"
+                            floor_hybridrequired />
+                    </div>
+                    <div>
+                        <label for="floors:quantity">HOW MANY UNDERGROUND LEVELS?</label>
+                        <input type="number" min="0" name="quantity" onkeyup="CalculateHybrid()" id="underground_hybrid"
+                            required />
+                    </div>
+                    <div>
+                        <label for="floors:quantity">HOW MANY AVAILABLE PARKING SPACES?</label>
+                        <input type="number" min="0" name="quantity" onkeyup="CalculateHybrid()" id="parking_hybrid"
+                            required />
+                    </div>
+                    <div>
+                        <label for="occupants:quantity">MAXIMUM OF OCCUPANTS PER FLOOR LEVEL</label>
+                        <input type="number" min="0" name="quantity" onkeyup="CalculateHybrid()" id="occupants_hybrid"
+                            required />
+                    </div>
+                    <div>
+                        <label for="hours:quantity">MAXIMUM HOURS OF OPERATION PER DAY</label>
+                        <input type="number" min="0" name="quantity" id="hours" required />
+                    </div>
+                </section>
+            </div>
+
+        </div>
+
+        <!-- /BILLING -->
+
+        <form>
+            <!-- PAYMENT METHOD -->
+            <fieldset class="box-border-shadow p-20">
+
+                <h4>Product Range</h4>
+
+                <hr>
+
+                <div class="toggle-transparent toggle-bordered-full clearfix">
+                    <div class="toggle active">
+                        <div class="toggle-content">
+
+                            <div class="row m-0-bottom">
+                                <div class="col-lg-12 m-0 clearfix">
+                                    <label class="mt-0 fs-14 fw-400 radio float-left m-0-top">
+                                        <input id="service_type_standard" name="category" type="radio" value="7565"
+                                            checked="checked" />
+                                        <i></i> <span class="fw-300">Standard Service</span>
+                                    </label>
+                                </div>
+                                <div class="col-lg-12 m-0 clearfix">
+                                    <label class="mt-0 fs-14 fw-400 radio float-left m-0-top">
+                                        <input id="service_type_premium" name="category" type="radio" value="12345"
+                                            checked="checked" />
+                                        <i></i> <span class="fw-300">Premium Service</span>
+                                    </label>
+                                </div>
+                                <div class="col-lg-12 m-0 clearfix">
+                                    <label class="mt-0 fs-14 fw-400 radio float-left m-0-top">
+                                        <input id="service_type_excelsium" name="category" type="radio" value="15400"
+                                            checked="checked" />
+                                        <i></i> <span class="fw-300">Excelium Service</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+
+            <!-- TOTAL / QUOTE REQUEST -->
+            <div class="toggle-transparent toggle-bordered-full clearfix">
+                <div class="toggle active">
+                    <div class="toggle-content">
+
+                        <span class="clearfix">
+                            <span id="shaft_numbers" class="float-right">
+                                <element onkeyup="myScript"></element>
+                            </span>
+                            <strong class="float-left">Quantity Of Elevator Shafts:</strong>
+                            <strong class="float-right" id="average_elevators"></strong>
+                            <br>
+                            <strong class="float-left">Quantity Of Column Lifts:</strong>
+                            <strong class="float-right" id="required_column_lifts"></strong>
+                            <br>
+                            <strong class="float-left">Quantity Of Required Elevator Shafts:</strong>
+                            <strong class="float-right" id="required_elevators"></strong>
+                        </span>
+
+                        <span class="clearfix">
+                            <strong><span class="float-right" id="subtotal"></span></strong>
+                            <strong class="float-left">Subtotal:</strong>
+                        </span>
+                        <span class="clearfix">
+                            <strong><span class="float-left">Installation Fees:</span></strong>
+                            <strong class="float-right" id="installation_fees"></strong>
+                        </span>
+
+                        <hr />
+
+                        <span class="clearfix">
+                            <strong><span class="float-right fs-20" id="totalFees"></span></strong>
+                            <strong class="float-left">TOTAL:</strong>
+                        </span>
+
+                        <hr />
+
+                        <button class="btn btn-primary btn-lg btn-block fs-15"><i class="fa fa-mail-forward"></i>
+                            Request A Quote Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- /TOTAL / QUOTE REQUEST -->
+
+    </div>
+
+
+
+    </form>
+    </div>
+    <!-- /CHECKOUT -->
+
+    </div>
+    </section>
+    <!-- /CHECKOUT -->
+
+
+    </div>
+    <!-- /wrapper -->
+
+
+    </div>
+
+    <div class="copyright">
+        <div class="container">
+            <ul class="float-right m-0 list-inline mobile-block">
+                <li><a href="#">Terms &amp; Conditions</a><br>
+                    <br>
+                    <p>
+                        Copyright 2002-2019 Rocket Elevators Corp. All Rights Reserved. The text, images, graphics,
+                        sound files, animation files, video files and their arrangement on Rocket Elevators Corp.
+                        internet sites are all subject to copyright and other intellectual property protection. These
+                        objects may not be copied for commercial use or distribution, nor may these objects be modified
+                        or reposted. Some Rocket Elevators Corp. internet sites also contain material that is subject to
+                        the copyright rights of their providers.
+                    </p>
+                </li>
+                <li><a href="#">Privacy</a><br>
+                    <br>
+                    <p>
+                        Thank you for reviewing the Rocket Elevators Corp. Privacy and Cookie Statement (“Statement”).
+                        The Rocket Elevators Corp. Company and its group of companies, which use brands including, but
+                        not limited to, Aviall, Rocket Elevators, Rocket Elevators Store, Future of Flight, Jeppesen
+                        (collectively “Rocket Elevators”) are sensitive to the issue of confidentiality in online
+                        interactions and are committed to protecting individual privacy across our range of websites,
+                        mobile applications, products, solutions, and services (collectively our "Services").
+
+                        This Statement applies to visitors and users of Rocket Elevators Corp. Services that link to
+                        this Statement. Services adopt different privacy statements, or privacy notices that supplement
+                        this Statement, to better fit transactions taking place on those Rocket Elevators Corp.
+                        Services. If a Service or brand has its own privacy statement or a supplementary notice, the
+                        provisions of that statement or supplementary notice will take priority if conflicting with this
+                        Statement.
+
+                        For your convenience, Rocket Elevators Corp. Services enable purchases, subscriptions, or use of
+                        other products and online services from other entities with different privacy practices, and the
+                        personal data collected in those instances will be governed by the respective privacy policies
+                        or statements of those other entities.</p>
+                </li>
+            </ul>
+            &copy; All Rights Reserved, Rocket Elevators Corp.
+        </div>
+    </div>
+
+    </footer>
+    <!-- /FOOTER -->
+
+    </div>
+    <!-- /wrapper -->
+
+
+    <!-- SCROLL TO TOP -->
+    <a href="#" id="toTop"></a>
+
+
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="inner">
+            <span class="loader"></span>
+        </div>
+    </div><!-- /PRELOADER -->
+
+
+    <!-- JAVASCRIPT FILES -->
+    <script>
+        var plugin_path = 'assets/plugins/';
+    </script>
+    <script src="assets/plugins/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/js/quote.js"></script>
+    <script src="assets/js/calculs_residential.js"></script>
+    <script src="assets/js/calculs_commercial.js"></script>
+    <script src="assets/js/calculs_corporate.js"></script>
+    <script src="assets/js/calculs_hybrid.js"></script>
+    <script src="assets/js/scripts.js"></script>
+</body>
+
+</html>

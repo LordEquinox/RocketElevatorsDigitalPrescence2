@@ -4,16 +4,22 @@ var RealFeez;
 
 function selector() {
     ServiceVariable = ($("input[class='radioService']:checked").value)
-    if (ServiceVariable = 7565) {
-        Feez = 0.1
-    } else if (ServiceVariable = 12345) {
-        Feez = 0.3
-    } else if (ServiceVariable = 15400) {
-        Feez = 0.6
+    if (parseInt(ServiceVariable) == 7565) {
+    } else if (parseInt(ServiceVariable) == 12345) {
+    } else if (parseInt(ServiceVariable) == 15400) {
+    }
+};
+
+function selectedFees() {
+    RealFeez = ($("input[class='radioService']:checked").value)
+    if (parseFloat(RealFeez) == 0.1) {
+    } else if (parseFloat(RealFeez) == 0.3) {
+    } else if (parseFloat(RealFeez) == 0.4) {
     }
 
     RealFeez = Feez
-};
+}
+
 
 
 function CalculateCommercial() {

@@ -1,22 +1,39 @@
-// RESIDENTIAL CALCULATION
+
 var ServiceVariable;
 var RealFeez;
 
-function selector(){
-ServiceVariable = ($("input[class='radioService']:checked").value)
-if (ServiceVariable = 7565) {
-    Feez = 0.1
-}
-else if (ServiceVariable = 12345) {
-    Feez = 0.3
-}
-else if (ServiceVariable = 15400){
-    Feez = 0.6
-}
+var Floors = document.getElementById("floor_resident").value;
+var Apartments = document.getElementById("units").value;
+var ServiceVariable = parseFloat($("input[name='category']:checked").val());
+var RealFeez = parseFloat($("input[name='category']:checked").val());
+var category = parseFloat($("input[name='category']:checked").val());
+console.log("ServiceVariable", ServiceVariable);
+console.log("Floors", Floors);
+console.log("Apartments", Apartments);
+console.log("category", category);
 
-RealFeez = Feez
+
+function selector() {
+    ServiceVariable = ($("input[class='radioService']:checked").value)
+    if (parseInt(ServiceVariable) == 7565) {
+    } else if (parseInt(ServiceVariable) == 12345) {
+    } else if (parseInt(ServiceVariable) == 15400) {
+    }
 };
 
+function selectedFees() {
+    RealFeez = ($("input[class='radioService']:checked").value)
+    if (parseFloat(RealFeez) == 0.1) {
+    } else if (parseFloat(RealFeez) == 0.3) {
+    } else if (parseFloat(RealFeez) == 0.4) {
+    }
+
+    RealFeez = Feez
+}
+
+
+
+// RESIDENTIAL CALCULATION
 function CalculateResidential() {
     var Floors = document.getElementById("floor_resident").value;
     var Apartments = document.getElementById("units").value;
@@ -41,19 +58,19 @@ function CalculateResidential() {
         $('#required_column_lifts').html(NbColumnLifts);
         
         // SERVICE FEES = SUB-TOTAL (frais de service = sous-total)
-        ServiceFeesRes = Math.ceil(nb_cage * ServiceVariable);
-        console.log("ServiceFees", ServiceFeesRes);
-        $('#subTotal').html(ServiceFeesRes);
+        ServiceFees = Math.ceil(nb_cage * ServiceVariable);
+        console.log("ServiceFees", ServiceFees);
+        $('#subTotal').html(ServiceFees);
 
 
         // INSTALLATION FEES (frais d'installation)
-        InstallFeesRes = Math.ceil(ServiceFees * RealFeez);
-        console.log("InstallFees", InstallFeesRes);
-        $('#InstallFees').html(InstallFeesRes);
+        InstallFees = Math.ceil(ServiceFees * RealFeez);
+        console.log("InstallFees", InstallFees);
+        $('#InstallFees').html(InstallFees);
 
   
         // TOTAL PRICE RESIDENTIAL (prix total residentiels)
-        PriceTotalResident = Math.ceil(ServiceFeesRes + InstallFeesRes); 
+        PriceTotalResident = Math.ceil(ServiceFees + InstallFees); 
         console.log("PriceTotalResident", PriceTotalResident); 
         $('#totalFees').html(PriceTotalResident);
     };
