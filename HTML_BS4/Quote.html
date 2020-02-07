@@ -243,7 +243,7 @@
 
         <section class="page-header">
             <div class="container">
-                <h1><strong>QUOTATION</strong></h1>
+                <h1 class="mt-0 fs-45 fw-400 text-center"><strong>QUOTATION</strong></h1>
             </div>
 
         </section>
@@ -264,12 +264,15 @@
         <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form p-4">
             <br>
             <br>
-            <h2>Building Information Required</h2><br>
+            <h1>Building Information Required</h1><br>
             <hr /><br>
             <br>
 
             <div class="col-md-12 col-sm-6 text-center">
-                <label class="mt-0 fs-20 fw-400 text-center" for="buildingType">Building Type *</label>
+                <label class="mt-0 fs-30 fw-400 text-center" for="buildingType">Building Type *</label>
+                <label class="mt-0 fs-20 fw-400 text-center" for="buildingType"><i>(Please the the button related to the type </i></label>
+                <label class="mt-0 fs-20 fw-400 text-center" for="buildingType"><i>of Service Product that you need first</i></label>
+                <label class="mt-0 fs-20 fw-400 text-center" for="buildingType"><i>before making a selection in this field) *</i></label>
                 <select onchange="BuildingType()" id="building_type" name="building[type]"
                     class="form-control pointer required fs-20">
                     <option value="0">Select...</option>
@@ -495,7 +498,6 @@
                         <input id="service_type_excelsium" class='radioProd' name="category" type="radio" value="15400" onchange='selector()' / > 
                         Excelium<br>
                         <br>
-                        <input type="submit" value="Submit">
                     </form>
                     
                     
@@ -547,7 +549,7 @@
                     <hr class="m-15" />
 
                     <span class="clearfix">
-                        <strong><span class="float-right" id="totalFees"></span></strong>
+                        <strong><span class="float-right" id="totalFees">$</span></strong>
                         <strong class="float-left">TOTAL:</strong>
                     </span>
 
