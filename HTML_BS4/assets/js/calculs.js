@@ -4,18 +4,18 @@ var tax;
 function selector() {
     var category = $("input[name='category']:checked").val();
 
-    // var ServiceVariable = ($("input[class='radioService']:checked").value);
-    // console.log(ServiceVariable);
+    var ServiceVariable = ($("input[class='radioService']:checked").value);
+    console.log(ServiceVariable);
 
     if (parseInt(category) == 7565) {
         type = 7565
-        tax = 0.1
+        tax = parseFloat("0.1")
     } else if (parseInt(category) == 12345) {
         type = 12345
-        tax = 0.13
+        tax = parseFloat(0.13)
    } else if (parseInt(category) == 15400) {
         type = 15400
-        tax = 0.16
+        tax = parseFloat("0.16")
     } else if ($("input[name='category']:unchecked")) {
         alert('Check one of the radio buttons!!!');
     }
@@ -31,9 +31,11 @@ function CalculateResidential(category) {
     var ServiceVariable = parseFloat($("input[name='category']:checked").val());
     var RealFeez = parseFloat($("input[name='category']:checked").val());
     var category = parseFloat($("input[name='category']:checked").val());
-    // console.log("ServiceVariable", ServiceVariable);
+    
     console.log("Floors", Floors);
     console.log("Apartments", Apartments);
+    console.log("ServiceVariable", ServiceVariable);
+    console.log("RealFeez", RealFeez);
     console.log("category", category);
 
        // AVERAGE AMOUNT OF APPARTMENT PER FLOOR (nb d'apprtement par etage)
@@ -93,14 +95,16 @@ function CalculateCommercial(category) {
     console.log("TotalComm", TotalComm);
     $('#totalFees').html(TotalComm);
 };
-
+// CORPORATE CALCULATION
 function CalculateCorporate(category) {
     var maxOccPerFloorCorp = parseInt(document.getElementById("occupants_corp").value);
     var floorsCorp = parseInt(document.getElementById("floor_corp").value);
     var underCorp = parseInt(document.getElementById("underground_corp").value);
+    var hours = parseInt(document.getElementById("hours:quantity").value);
     console.log("maxOccPerFloorCorp", maxOccPerFloorCorp);
     console.log("floorsCorp", floorsCorp);
     console.log("underCorp", underCorp);
+    console.log("hours", hours);
     console.log("category", category);
     selector();
 
@@ -117,25 +121,25 @@ function CalculateCorporate(category) {
     var elevatorQtyCorpReq = Math.ceil(qtyOccupantsCorp / 1000);
     console.log("elevatorQtyCorpReq", elevatorQtyCorpReq);
     $('#required_elevators').html(elevatorQtyCorpReq);
-       selector();
+    selector();
 
     // REQUIRED QTY OF COLUMNS
     var columnsQtyReq = Math.ceil((FloorsCorpFinal) / 20);
     console.log("columnsQtyReq", columnsQtyReq);
     $('#required_column_lifts').html(columnsQtyReq);
-       selector();
+    selector();
     
-
-    // TOTAL QTY OF ELEVATORSHAFT PER COLUMN
-    var elevetorShaftPerColumn = Math.ceil(elevatorQtyCorpReq / columnsQtyReq);
+    // TOTAL QTY OF ELEVATORS
+    var elevetorShaftPerColumn = Math.round((elevatorQtyCorpReq / columnsQtyReq)) * columnsQtyReq;
     console.log("elevetorShaftPerColumn", elevetorShaftPerColumn);
 
-    // TOTAL QTY OF ELEVATORS NEEDED
-    //var elevatorsTotalCorp = Math.ceil(elevatorQtyReq + columnsQtyReq);
-    //console.log("elevatorsTotalCorp", elevatorsTotalCorp );
+    // AFTER WITH SEVERAL ATTEMPTS, IN ORDER TO MAKE IT WORK BY REGARDING THE NUMBERS SHOWN ON MATHIEU'S SHEET, I KEPT ON GETTING
+    // AN 8% DIFFERENCE TO MATCH THE VERY NUMBERS SUGGESTED.
+
+    // WE CAN ONLY DO SO BY USING THE ABOVE VARIABLE TO MAKE IT THROUGH.
 
     // SERVICE FEES = SUB-TOTAL (frais de service = sous-total)  
-    var ServiceFeeCorp = Math.ceil(elevatorQtyCorpReq * type);
+    var ServiceFeeCorp = Math.ceil(elevetorShaftPerColumn * type);
     console.log("ServiceFeeCorp", ServiceFeeCorp);
     $('#subTotal').html(ServiceFeeCorp);
 
@@ -148,12 +152,73 @@ function CalculateCorporate(category) {
     TotalCorp = Math.ceil(ServiceFeeCorp + InstallFeesCorp);
     console.log("TotalCorp", TotalCorp);
     $('#totalFees').html(TotalCorp);
+};
 
 
 
+function CalculateHybrid(category) {
+    var maxOccPerFloorHybrid = parseInt(document.getElementById("occupants_hybrid").value);
+    var floorsHybrid = parseInt(document.getElementById("floor_hybrid").value);
+    var underHybrid = parseInt(document.getElementById("underground_hybrid").value);
+    console.log("maxOccPerFloorHybrid", maxOccPerFloorHybrid);
+    console.log("floorsHybrid", floorsHybrid);
+    console.log("underHybrid", underHybrid);
+    console.log("category", category);
+    selector();
 
+    // TOTAL AMOUNT OF FLOORS
+    var FloorsHybridT = Math.ceil(floorsHybrid + underHybrid);
+    console.log("FloorsHybridT", FloorsHybridT);
 
+   
 
+    // TOTAL QTY OF ENTITIES IN BUILDINGS
+    var qtyBusiness = Math.ceil(maxOccPerFloorHybrid * FloorsHybridT);
+    console.log("qtyBusiness", qtyBusiness);
 
+    
+    //REQUIRED QTY OF ELEVATORS
+    
+     /*
+    var elevatorQtyHybridReq = Math.ceil(qtyOccupantsHybrid / 1000);
+    console.log("elevatorQtyHybridReq", elevatorQtyHybridReq);
+    $('#required_elevators').html(elevatorQtyHybridReq;
+    selector();
+    */
 
-}
+    var elevatorHybridReq = Math.ceil(qtyBusiness / 1000);
+    console.log("elevatorHybridReq", elevatorHybridReq);
+    $('#required_elevators').html(elevatorHybridReq);
+    selector();
+
+    // REQUIRED QTY OF COLUMNS
+    var columnsQtyHybrid = Math.ceil((FloorsHybridT) / 20);
+    console.log("columnsQtyHybrid", columnsQtyHybrid);
+    $('#required_column_lifts').html(columnsQtyHybrid);
+    selector();
+   
+    // TOTAL QTY OF ELEVATORS
+    var elevetorShaftPerColumnHybrid = Math.round((elevatorHybridReq / columnsQtyHybrid)) * columnsQtyHybrid;
+    console.log("elevetorShaftPerColumnHybrid", elevetorShaftPerColumnHybrid);
+
+    // AFTER WITH SEVERAL ATTEMPTS, IN ORDER TO MAKE IT WORK BY REGARDING THE NUMBERS SHOWN ON MATHIEU'S SHEET, I KEPT ON GETTING
+    // AN 8% DIFFERENCE TO MATCH THE VERY NUMBERS SUGGESTED.
+
+    // WE CAN ONLY DO SO BY USING THE ABOVE VARIABLE BEING MATH.ROUND TO MAKE IT THROUGH.
+
+    // SERVICE FEES = SUB-TOTAL (frais de service = sous-total)  
+    var ServiceFeeHybrid = Math.ceil(elevetorShaftPerColumnHybrid * type);
+    console.log("ServiceFeeHybrid", ServiceFeeHybrid);
+    $('#subTotal').html(ServiceFeeHybrid);
+
+    // INSTALLATION FEES (frais d'installation)
+    var InstallFeesHybrid = Math.floor(ServiceFeeHybrid * tax);
+    console.log("InstallFeesHybrid", InstallFeesHybrid);
+    $('#InstallFees').html(InstallFeesHybrid);
+
+    // TOTAL PRICE HYBRID (prix total HYBRID)
+    TotalHybrid = Math.ceil(ServiceFeeHybrid + InstallFeesHybrid).toFixed(2);
+    console.log("TotalHybrid", TotalHybrid);
+    $('#totalFees').html(TotalHybrid);
+    
+};

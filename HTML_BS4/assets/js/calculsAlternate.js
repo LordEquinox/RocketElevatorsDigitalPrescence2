@@ -219,6 +219,7 @@ function CalculateCorporate() {
     var floorsCorp = document.getElementById("floor_corp").value;
     var underCorp = document.getElementById("underground_corp").value;
     var occupantPFloorCorp = document.getElementById("occupants_corp").value;
+    console.log("elevatorsCorp", elevatorsCorp);
     console.log("floorsCorp", floorsCorp);
     console.log("underCorp", underCorp);
     console.log("occupantPFloorCorp", occupantPFloorCorp);

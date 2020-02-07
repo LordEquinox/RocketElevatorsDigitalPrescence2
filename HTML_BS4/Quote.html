@@ -418,7 +418,7 @@
                     <div id="hybridBuildings" style="display: none">
                         <!-- <div id="" style="display: none">  //CARL -->
                         <div class="col-md-12 col-sm-2 text-center">
-                            <label for="units:quantity">HOW MANY COMMERCIAL ENTITIES?</label>
+                            <label for="units:quantity">QTY OF SPECIFIC BUSINESSES?</label>
                             <input type="number" min="0" name="quantity" onkeyup="CalculateHybrid()"
                                 id="entities_hybrid" required / ><br>
                         </div><br>
@@ -447,7 +447,7 @@
                         </div><br>
                         <div class="col-md-12 col-sm-2 text-center">
                             <label for="hours:quantity">MAXIMUM HOURS OF OPERATION PER DAY</label>
-                            <input type="number" min="0" name="quantity" id="hours" required / ><br>
+                            <input type="number" min="0" max="24" name="quantity" id="hours" required / ><br>
                         </div><br>
 
                     </div>
@@ -529,12 +529,10 @@
                     <strong class="float-left">Quantity Of Column Lifts:</strong>
                     <strong class="float-right" id="required_column_lifts"></strong><br>
                     <br>
-                    <strong class="float-left">Quantity Of Required Elevator Shafts:</strong>
+                    <strong class="float-left">Quantity Of Required Elevators:</strong>
                     <strong class="float-right" id="required_elevators"></strong>
 
                     </span>
-                    
-                    <br>
                     <br>
                     <span class="clearfix">
                         <strong><span class="float-right" id="subTotal"></span></strong>
