@@ -28,8 +28,8 @@ function CalculateResidential(category) {
 
     var Floors = document.getElementById("floor_resident").value;
     var Apartments = document.getElementById("units").value;
-    // var ServiceVariable = parseFloat($("input[name='category']:checked").val());
-    // var RealFeez = parseFloat($("input[name='category']:checked").val());
+    var ServiceVariable = parseFloat($("input[name='category']:checked").val());
+    var RealFeez = parseFloat($("input[name='category']:checked").val());
     var category = parseFloat($("input[name='category']:checked").val());
     // console.log("ServiceVariable", ServiceVariable);
     console.log("Floors", Floors);
@@ -70,128 +70,11 @@ function CalculateResidential(category) {
        $('#totalFees').html(PriceTotalResident);
 };
 
-//     else if (parseInt(category) == 7565) {
-//         if (type === "Commercial") {
-//             CalculateResidential(category)
-//         }
-
-//     } 
-//     else if (parseInt(category) == 12345) {
-//         if (type === "Commercial") {
-//             CalculateResidential(category)
-//         }
-
-//     } 
-//     else if (parseInt(category) == 15400) {
-//         if (type === "Commercial") {
-//             CalculateResidential(category)
-//         }
-//     }
-
-//     else if (parseInt(category) == 7565) {
-//         if (type === "Corporate") {
-//             CalculateResidential(category)
-//         }
-
-//     } 
-//     else if (parseInt(category) == 12345) {
-//         if (type === "Corporate") {
-//             CalculateResidential(category)
-//         }
-
-//     } 
-//     else if (parseInt(category) == 15400) {
-//         if (type === "Corporate") {
-//             CalculateResidential(category)
-//         }
-//     }
-
-//     else if (parseInt(category) == 7565) {
-//         if (type === "Hybrid") {
-//             CalculateResidential(category)
-//         }
-
-//     } 
-//     else if (parseInt(category) == 12345) {
-//         if (type === "Hybrid") {
-//             CalculateResidential(category)
-//         }
-
-//     } 
-//     else if (parseInt(category) == 15400) {
-//         if (type === "Hybrid") {
-//             CalculateResidential(category)
-//         }
-//     }
-
-
-    
-// };
-
-// function selectedFees() {
-//     var RealFeez = ($("input[class='radioService']:checked").value);
-    
-//     if (parseFloat(category) == 0.1) {
-//         if (type === "Residential") {
-//             CalculateResidential(category)
-//         }
-//     } else if (parseFloat(category) == 0.3) {
-//         if (type === "Residential") {
-//             CalculateResidential(category)
-//         }
-
-//     } else if (parseFloat(category) == 0.16) {
-//         if (type === "Residential") {
-//             CalculateResidential(category)
-//         }
-    
-//       }  if (parseFloat(category) == 0.1) {
-//             if (type === "Commercial") {
-//                 CalculateCommercial(category)
-//             }
-//         } else if (parseFloat(category) == 0.3) {
-//             if (type === "Commercial") {
-//                 CalculateCommercial(category)
-//             }
-    
-//         } else if (parseFloat(category) == 0.16) {
-//             if (type === "Commercial") {
-//                 CalculateCommercial(category)
-//             }
-//         }if (parseFloat(category) == 0.1) {
-//                 if (type === "Corporate") {
-//                     CalculateCorporate(category)
-//                 }
-//             } else if (parseFloat(category) == 0.3) {
-//                 if (type === "Corporate") {
-//                     CalculateCorporate(category)
-//                 }
-        
-//             } else if (parseFloat(category) == 0.16) {
-//                 if (type === "Corporate") {
-//                     CalculateCorporate(category)
-//                 }
-//             } if (parseFloat(category) == 0.1) {
-//                     if (type === "Hybrid") {
-//                         CalculateHybrid(category)
-//                     }
-//                 } else if (parseFloat(category) == 0.3) {
-//                     if (type === "Hybrid") {
-//                         CalculateHybrid(category)
-//                     }
-            
-//                 } else if (parseFloat(category) == 0.16) {
-//                     if (type === "Hybrid") {
-//                         CalculateHybrid(category)
-//                     }
-//                 }
-
-// };
-
 // COMMERCIAL CALCULATION
-function CalculateCommercial() {
+function CalculateCommercial(category) {
     var elevatorsComm = document.getElementById("elevatorsCommercial").value;
-    console.log('elevator units', elevatorsComm)
+    console.log('elevator units', elevatorsComm);
+    console.log("category", category);
     $('#required_elevators').html(elevatorsComm);
     selector();
 
@@ -207,64 +90,70 @@ function CalculateCommercial() {
 
     // TOTAL PRICE COMMERCIAL (prix total COMMERCIAL)
     TotalComm = Math.ceil(ServiceFeeComm + InstallFeesComm);
-    console.log("PriceTotalResident", TotalComm);
+    console.log("TotalComm", TotalComm);
     $('#totalFees').html(TotalComm);
 };
 
-function CalculateCorporate() {
-
-    var elevatorsCorp = document.getElementById("entities_corp").value;
-    var category = parseFloat($("input[name='category']:checked").val());
-    var floorsCorp = document.getElementById("floor_corp").value;
-    var underCorp = document.getElementById("underground_corp").value;
-    var occupantPFloorCorp = document.getElementById("occupants_corp").value;
+function CalculateCorporate(category) {
+    var maxOccPerFloorCorp = parseInt(document.getElementById("occupants_corp").value);
+    var floorsCorp = parseInt(document.getElementById("floor_corp").value);
+    var underCorp = parseInt(document.getElementById("underground_corp").value);
+    console.log("maxOccPerFloorCorp", maxOccPerFloorCorp);
     console.log("floorsCorp", floorsCorp);
     console.log("underCorp", underCorp);
-    console.log("occupantPFloorCorp", occupantPFloorCorp);
     console.log("category", category);
-    $('#required_elevators').html(elevatotsTotalCorp);
-
-
-    //QTY OF FLOOR LEVELS CORPORATE (nombre d'etages total corporatif)
-    var multiFloorsCorp = (floorsCorp + underCorp);
-    console.log("multiFloorsCorp", multiFloorsCorp);
-
-    // TOTAL OCCUPANTS CORPORATE (nombre d'occupants total)
-    var occ_corp_total = Math.ceil(occupantPFloorCorp * multiFloorsCorp);
-    console.log(occ_corp_total, occ_corp_total);
-
-    // REQUIRED QTY OF COLUMNS (nombre de colonnes d'ascenseur requises)
-    var NbColumnLifts_Corp = Math.ceil((multiFloorsCorp) / 20);
-    console.log("NbColumnLifts_Corp", NbColumnLifts_Corp);
-    $('#required_column_lifts').html(NbColumnLifts_Corp);
-
-    // QTY REQUIRED ELEVATORS PER COLUMN (quantité requise d'ascenseur par colonne)
-    var elevatorsPerColCorp = Math.ceil((occ_corp_total) / 1000);
-    console.log("elevatorsPerColCorp", elevatorsPerColCorp);
-
-    // QTY REQUIRED ELEVATOR SHAFT PER COLUMN (quantité de cages d'ascenseur nécessaires)
-    var elevatorShaftCorp = Math.ceil(elevatorsPerColCorp / NbColumnLifts_Corp);
-    console.log("elevatorsPerColCorp", elevatorsPerColCorp);
-
-    //TOTAL AMOUNT OF REQUIRED ELEVATORS (nombre total d'ascenseur nécessaires
-    var elevatotsTotalCorp = Math.ceil(NbColumnLifts_Corp * elevatorsPerColCorp);
-    console.log("elevatotsTotalCorp", elevatotsTotalCorp);
-    $('#required_elevators').html(elevatotsTotalCorp);
     selector();
 
+    // TOTAL AMOUNT OF FLOORS
+    var FloorsCorpFinal = Math.ceil(floorsCorp + underCorp);
+    console.log("FloorsCorpFinal", FloorsCorpFinal);
+
+    // TOTAL QTY OF ENTITIES IN BUILDINGS
+    var qtyOccupantsCorp = Math.ceil(maxOccPerFloorCorp * FloorsCorpFinal);
+    console.log("qtyOccupantsCorp", qtyOccupantsCorp);
+
+
+    //REQUIRED QTY OF ELEVATORS
+    var elevatorQtyCorpReq = Math.ceil(qtyOccupantsCorp / 1000);
+    console.log("elevatorQtyCorpReq", elevatorQtyCorpReq);
+    $('#required_elevators').html(elevatorQtyCorpReq);
+       selector();
+
+    // REQUIRED QTY OF COLUMNS
+    var columnsQtyReq = Math.ceil((FloorsCorpFinal) / 20);
+    console.log("columnsQtyReq", columnsQtyReq);
+    $('#required_column_lifts').html(columnsQtyReq);
+       selector();
+    
+
+    // TOTAL QTY OF ELEVATORSHAFT PER COLUMN
+    var elevetorShaftPerColumn = Math.ceil(elevatorQtyCorpReq / columnsQtyReq);
+    console.log("elevetorShaftPerColumn", elevetorShaftPerColumn);
+
+    // TOTAL QTY OF ELEVATORS NEEDED
+    //var elevatorsTotalCorp = Math.ceil(elevatorQtyReq + columnsQtyReq);
+    //console.log("elevatorsTotalCorp", elevatorsTotalCorp );
+
     // SERVICE FEES = SUB-TOTAL (frais de service = sous-total)  
-    var ServiceFeeCorp = Math.ceil(elevatotsTotalCorp * type);
-    console.log("ServiceFeeCorp)", ServiceFeeCorp);
+    var ServiceFeeCorp = Math.ceil(elevatorQtyCorpReq * type);
+    console.log("ServiceFeeCorp", ServiceFeeCorp);
     $('#subTotal').html(ServiceFeeCorp);
 
     // INSTALLATION FEES (frais d'installation)
     var InstallFeesCorp = Math.ceil(ServiceFeeCorp * tax);
-    console.log("InstallFeesCrp", InstallFeesCorp);
+    console.log("InstallFeesCorp", InstallFeesCorp);
     $('#InstallFees').html(InstallFeesCorp);
 
     // TOTAL PRICE COMMERCIAL (prix total COMMERCIAL)
     TotalCorp = Math.ceil(ServiceFeeCorp + InstallFeesCorp);
-    console.log("PriceTotalResident", TotalCorp);
+    console.log("TotalCorp", TotalCorp);
     $('#totalFees').html(TotalCorp);
 
-};
+
+
+
+
+
+
+
+}

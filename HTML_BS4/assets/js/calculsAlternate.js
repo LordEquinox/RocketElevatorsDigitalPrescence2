@@ -267,4 +267,15 @@ function CalculateCorporate() {
     console.log("PriceTotalResident", TotalCorp);
     $('#totalFees').html(TotalCorp);
 
+
+ // SERVICE FEES = SUB-TOTAL (frais de service = sous-total)  
+    var ServiceFeeComm = Math.ceil(elevatorsComm * ServiceVariable);
+    console.log("priceCommercial", ServiceFeeComm);
+    $('#subTotal').html(ServiceFeeComm);
+
+    // INSTALLATION FEES (frais d'installation)
+    var InstallFeesComm = Math.ceil(ServiceFeeComm * RealFeez);
+    console.log("InstallFeesComm", InstallFeesComm);
+    $('#InstallFees').html(InstallFeesComm);
+
 };
