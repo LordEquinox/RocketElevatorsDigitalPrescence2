@@ -100,12 +100,11 @@ function CalculateCorporate(category) {
     var maxOccPerFloorCorp = parseInt(document.getElementById("occupants_corp").value);
     var floorsCorp = parseInt(document.getElementById("floor_corp").value);
     var underCorp = parseInt(document.getElementById("underground_corp").value);
-    var hours = parseInt(document.getElementById("hours:quantity").value);
     console.log("maxOccPerFloorCorp", maxOccPerFloorCorp);
     console.log("floorsCorp", floorsCorp);
     console.log("underCorp", underCorp);
-    console.log("hours", hours);
     console.log("category", category);
+    
     selector();
 
     // TOTAL AMOUNT OF FLOORS
@@ -217,7 +216,7 @@ function CalculateHybrid(category) {
     $('#InstallFees').html(InstallFeesHybrid);
 
     // TOTAL PRICE HYBRID (prix total HYBRID)
-    TotalHybrid = Math.ceil(ServiceFeeHybrid + InstallFeesHybrid).toFixed(2);
+    TotalHybrid = Math.ceil(ServiceFeeHybrid + InstallFeesHybrid);
     console.log("TotalHybrid", TotalHybrid);
     $('#totalFees').html(TotalHybrid);
     
