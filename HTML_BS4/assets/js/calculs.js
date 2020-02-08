@@ -67,7 +67,7 @@ function CalculateResidential(category) {
 
  
        // TOTAL PRICE RESIDENTIAL (prix total residentiels)
-       PriceTotalResident = Math.ceil(ServiceFees + InstallFees); 
+       PriceTotalResident = Math.ceil(ServiceFees + InstallFees).toFixed(2); 
        console.log("PriceTotalResident", PriceTotalResident); 
        $('#totalFees').html(PriceTotalResident);
 };
@@ -91,7 +91,7 @@ function CalculateCommercial(category) {
     $('#InstallFees').html(InstallFeesComm);
 
     // TOTAL PRICE COMMERCIAL (prix total COMMERCIAL)
-    TotalComm = Math.ceil(ServiceFeeComm + InstallFeesComm);
+    TotalComm = Math.ceil(ServiceFeeComm + InstallFeesComm).toFixed(2);
     console.log("TotalComm", TotalComm);
     $('#totalFees').html(TotalComm);
 };
@@ -166,7 +166,7 @@ function CalculateHybrid(category) {
     selector();
 
     // TOTAL AMOUNT OF FLOORS
-    var FloorsHybridT = Math.ceil(floorsHybrid + underHybrid);
+    var FloorsHybridT = Math.ceil(floorsHybrid + underHybrid).toFixed(2);
     console.log("FloorsHybridT", FloorsHybridT);
 
    
@@ -216,7 +216,7 @@ function CalculateHybrid(category) {
     $('#InstallFees').html(InstallFeesHybrid);
 
     // TOTAL PRICE HYBRID (prix total HYBRID)
-    TotalHybrid = Math.ceil(ServiceFeeHybrid + InstallFeesHybrid);
+    TotalHybrid = Math.ceil(ServiceFeeHybrid + InstallFeesHybrid).toFixed(2);
     console.log("TotalHybrid", TotalHybrid);
     $('#totalFees').html(TotalHybrid);
     
